@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Numbers</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo:ital,wght@0,100..900;1,100..900&family=Asap:ital,wght@0,100..900;1,100..900&family=Baloo+2:wght@400..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Leckerli+One&family=Maven+Pro:wght@400..900&family=Monomaniac+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo:ital,wght@0,100..900;1,100..900&family=Asap:ital,wght@0,100..900;1,100..900&family=Baloo+2:wght@400..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Leckerli+One&family=Maven+Pro:wght@400..900&family=Monomaniac+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo:ital,wght@0,100..900;1,100..900&family=Asap:ital,wght@0,100..900;1,100..900&family=Baloo+2:wght@400..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Leckerli+One&family=Maven+Pro:wght@400..900&family=Monomaniac+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+
+</head>
+<body>
+    <div class="logo flex-row">
+        <img src="assets/icons/logo.svg" alt="ícone da logo">
+        <h1>Numbers</h1>
+    </div>
+
+    <div class="container">
+        <header>
+            <h2>Online - gratuito</h2>
+            <h1>Sorteador de números</h1>
+        </header>
+
+        <div class="content-form">
+
+            <div class="title-form">
+                <h3>Quero sortear:</h3>
+                <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+            </div>
+
+            <form class="form">
+
+                <fieldset>
+                    <label for="number_quantidy">Números</label>
+                    <input type="number" name="number_quantidy" id="number_quantidy" min="1" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="start-number">De</label>
+                    <input type="number" name="start-number" id="start-number" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="final-number">Até</label>
+                    <input type="number" name="final-number" id="final-number" required>
+                </fieldset>
+
+            </form>
+
+            <div class="toggle">
+                <img src="assets/icons/state=default.svg" alt="ícone do botão default">
+                <span>Não repetir número</span>
+            </div>
+
+            <button type="submit" class="btn">
+                <h3>Sortear</h3>
+                <img src="assets/icons/Frame-1.svg" alt="ícone de seta">
+            </button>
+
+        </div>
+
+        <div class="questions">
+            <div class="text">
+                <div class="text-heading">
+                    <img src="assets/icons/Frame (1).svg" alt="">
+                    <h4>Como funciona o sorteador de números?</h4>
+                </div>
+                <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+            </div>
+            <div class="text">
+                <div class="text-heading">
+                    <img src="assets/icons/Frame (1).svg" alt="">
+                    <h4>Posso escolher o intervalo dos números?</h4>
+                </div>
+                <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

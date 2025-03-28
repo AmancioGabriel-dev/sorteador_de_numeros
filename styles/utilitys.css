@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+
+    cursor: pointer;
+
+    border: none;
+
+    background-color: var(--bg-tertiary);
+
+    padding: 16px;
+    gap: 8px;
+
+    height: 56px;
+    width: 320px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    font-family : "Roboto flex" ;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--content-primary);
+}

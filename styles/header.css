@@ -1,0 +1,60 @@
+.logo {
+    gap: 11px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 44px;
+    padding-inline: 100px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    margin-top: 46px;
+
+    width: 319px;
+    height: 136px;
+
+
+    & h2 {
+        font-family: "Roboto Mono";
+        font-weight: 600;
+        line-height: 150%;
+        text-transform: uppercase;
+        font-size: 16px;
+
+
+        background : linear-gradient(90deg , #C7C9CC 100%, #3D3D3D 0%);
+        -webkit-background-clip : text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    & h1 {
+        font-size: 40px;
+    }
+}
+
+@media (width >= 80em) {
+    .logo {
+        align-items: center;
+        justify-content: start;
+        padding-inline: 120px;
+    }
+
+    header {
+        grid-column: 1;
+        grid-row: 1;
+
+        margin-top: 89px;
+
+
+        & h1 {
+            width: 508px;
+      
+            font-size: 72px;
+            font-weight: 700;
+        }
+    }
+}

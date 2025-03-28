@@ -1,0 +1,145 @@
+* , *::after , *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-display : "Sora" , sans-serif;
+    --display-large : 700 72px/130% uppercase var(--ff-display);
+    --display-medium : 700 40px/130% uppercase var(--ff-display);
+    --display-small : 600 32px/130% uppercase var(--ff-display);
+
+    --overline : 600 16px/150% uppercase "Roboto Mono";
+
+    --p-large : 500 16px/150% "Roboto Flex";
+    --p-medium : 500 14px/150% "Roboto Flex";
+    --p-small : 500 12px/150% "Roboto Flex";
+    --label-lg : 600 20px/150% "Roboto Flex";
+    --label-medium : 600 16px/150% "Roboto Flex";
+
+
+    --content-primary : #FFFFFF;
+    --content-secondary : #C7C9CC;
+    --content-tertiary : #D9D9D9;
+    --content-brand : #C58DE7;
+    --color-inverse : #030203;
+
+    --bg-primary : #020202;
+    --bg-secondary : #111012;
+    --bg-tertiary : #24222E;
+    --bg-brand : #C58DE7;
+    --bg-gray : #3D3D3D;
+
+    --accent-pink : #D586E0;
+    --accent-blue : #91A1FA;
+    --accent-green : #77C0AA;
+    --accent-lime : #D1DC97;
+    --accent-red : #E9A9B3;
+
+    --gradient-border : radial-gradient(#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%)
+
+    --gradient-bg : linear-gradient(90deg , #D586E0 0%, #91A1FA 98.93%)
+    --gradient-content : linear-gradient(90deg , #C7C9CC 0%, #3D3D3D 100%);
+}
+
+html {
+    background-color: var(--bg-primary);
+    background-image: url(../assets/images/Linha.png);
+    color: var(--content-primary);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Sora' , sans-serif;
+    line-height: 130%;
+    letter-spacing: -4%;
+    text-transform: uppercase;
+    color: var(--content-primary);
+}
+
+.container {
+    padding-inline: 36px ;
+}
+
+label {
+    font: var(--label-medium);
+    color: var(--content-tertiary);
+    text-transform: uppercase;
+}
+
+input[type=number] {
+    all: unset;
+    background-color: var(--bg-secondary);
+    font-family: "Sora";
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+
+    border-radius: 8px;
+
+    padding-inline: 8px;
+    padding-block: 4px;
+
+    width: 86px;
+
+    border: 1px solid transparent;
+
+    transition: 
+        border 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+
+    position: relative;
+
+    &:hover,
+    &:focus {
+        background: #24222E;
+    }
+
+    &:hover::before,
+    &:focus::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        background: linear-gradient(
+            to right, 
+            #77C0AF 0%, 
+            #D1DC97 14.84%, 
+            #E9A9B3 32.15%, 
+            #D586E0 65.79%, 
+            #91A1FA 84.58%
+        );
+        border-radius: 8px;
+        z-index: -1;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+
+    width: 86px;
+    height: 88px;
+
+    text-align: center;
+}
+
+@media (width >= 80em) {
+    .container {
+        padding-inline: 134px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto;  
+        align-items: start; 
+    }
+}
