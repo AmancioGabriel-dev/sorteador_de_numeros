@@ -8,6 +8,11 @@
     gap: 40px;
 }
 
+.content-form.hiding {
+    animation: fadeOut 0.5s ease forwards;
+    pointer-events: none;
+}
+
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

@@ -92,49 +92,76 @@ function sortNumbers() {
 
 function displayResults(numbers) {
 
-    disappear.classList.add('none');
+    disappear.classList.add('hiding');
+
+    setTimeout(() => {
+        disappear.classList.add('none');
 
 
-    const oldResults = document.querySelector('.results');
-    if (oldResults) {
-        oldResults.remove();
-    }
-
-    const resultsDiv = document.createElement('div');
-    resultsDiv.className = 'results';
-
-    const title = document.createElement('h3');
-    title.textContent = "Resultado do sorteio";
-    resultsDiv.appendChild(title);
-
-    const subtitleResult = document.createElement('p');
-    subtitleResult.textContent = 'Resultado :';
-    resultsDiv.appendChild(subtitleResult); 
-
-    const numbersContainer = document.createElement('div');
-    numbersContainer.className = 'numbers-container';
-
-    numbers.forEach(number => {
-        const numberDiv = document.createElement('div');
-        numberDiv.className = 'number';
-        numberDiv.textContent = number ; 
-        numbersContainer.appendChild(numberDiv);
-    });
-
-    resultsDiv.appendChild(numbersContainer);
-
-    const newDrawButton = document.createElement('button');
-    newDrawButton.className = 'btn new-draw';
-    newDrawButton.textContent = 'Sortear novamente';
-    newDrawButton.addEventListener('click', () => {
-        resultsDiv.remove();
-        disappear.classList.remove('none');
-    });
+        const oldResults = document.querySelector('.results');
+        if (oldResults) {
+            oldResults.remove();
+        }
     
-    resultsDiv.appendChild(newDrawButton);
+        const resultsDiv = document.createElement('div');
+        resultsDiv.className = 'results';
     
+        const title = document.createElement('h3');
+        title.textContent = "Resultado do sorteio";
+        resultsDiv.appendChild(title);
     
-    disappear.parentNode.insertBefore(resultsDiv, disappear.nextSibling);
+        const subtitleResult = document.createElement('p');
+        subtitleResult.textContent = 'Resultado :';
+        resultsDiv.appendChild(subtitleResult); 
+    
+        const numbersContainer = document.createElement('div');
+        numbersContainer.className = 'numbers-container';
+    
+        numbers.forEach((number , index) => {
+            const numberDiv = document.createElement('div');
+            numberDiv.className = 'number';
+            numberDiv.textContent = number ; 
+            numberDiv.style.animationDelay = `${0.8 + (index * 0.15)}s`
+            numbersContainer.appendChild(numberDiv);
+        });
+    
+        resultsDiv.appendChild(numbersContainer);
+    
+        const newDrawButton = document.createElement('button');
+        newDrawButton.className = 'btn new-draw';
+        newDrawButton.textContent = 'Sortear novamente';
+        const restartImg = document.createElement("img");
+        restartImg.src = "assets/icons/Frame.svg";
+        restartImg.alt = "ícone de restart";
+        newDrawButton.appendChild(restartImg); 
+
+        newDrawButton.addEventListener('click', () => {
+            resultsDiv.style.animation = "fadeOut 0.5s ease forwards";
+    
+            setTimeout(() => {
+                resultsDiv.remove();
+                disappear.classList.remove('none');
+    
+                disappear.classList.remove('hiding');
+        
+                total.value = '';
+                startValue.value = '';
+                endValue.value = '';
+        
+            }, 500)
+    
+        });
+        
+        resultsDiv.appendChild(newDrawButton);
+        
+        
+        disappear.parentNode.insertBefore(resultsDiv, disappear.nextSibling);
+
+
+
+    }, 500)
+
+   
 
 }
 
