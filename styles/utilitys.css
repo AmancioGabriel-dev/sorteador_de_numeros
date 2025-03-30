@@ -18,7 +18,7 @@
 
     border: none;
 
-    background-color: var(--bg-tertiary);
+    background: var(--bg-tertiary);
 
     padding: 16px;
     gap: 8px;
@@ -36,6 +36,21 @@
     line-height: 150%;
     text-transform: uppercase;
     color: var(--content-primary);
+
+    transition: all 0.3s ease;
+
+
+    &:hover {
+        transform: scale(1.05);
+        background: var(bg-secondary);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.new-draw:hover {
+    transform: scale(1.05);
+    background: var(bg-secondary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .none {
