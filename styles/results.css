@@ -1,0 +1,78 @@
+.results {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+    margin-top: 71px;
+
+
+    & h3 {
+        font-family: 'Roboto Flex';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+    
+    & p {
+        font-family: 'Roboto Mono';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--content-secondary);
+        text-transform: uppercase;
+    }
+}
+
+.numbers-container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 16px;
+
+    & .number {
+        color: var(--content-brand);
+
+        border-radius: 28px;
+
+        font-family: 'Roboto Mono';
+        font-weight: 600;
+        font-size: 48px;
+    }
+}
+
+.toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    user-select: none;
+    position: relative;
+}
+
+/* Transição suave para o ícone */
+.toggle img {
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* Efeito durante a transição */
+.toggle.toggling img {
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+/* Efeito de clique */
+.toggle.clicked {
+    transform: scale(0.95);
+}
+
+/* Adicionando um efeito de hover */
+.toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}

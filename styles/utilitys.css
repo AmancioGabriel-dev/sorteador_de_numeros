@@ -37,3 +37,7 @@
     text-transform: uppercase;
     color: var(--content-primary);
 }
+
+.none {
+    display: none !important;
+}
